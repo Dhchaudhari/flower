@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>flower</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        #banner {
+            height: 100%;
+            padding: 120px 0;
+            width: 100%;
+
+            background: linear-gradient(rgba(0, 0, 0, 0.502), rgba(0, 0, 0, 0.352)), url(./image/background-beautiful-beauty-bloom-158636.jpeg);
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #banner .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            flex-direction: column;
+            color: #fff;
+            padding: 10px;
+        }
+
+        #banner .box h1 {
+            font-size: 65px;
+            font-family: 'Merienda', cursive;
+        }
+
+        #banner .box p {
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+            word-spacing: 2px;
+            margin: 15px 0 0 0;
+        }
+
+        #banner .box .btn {
+            text-align: center;
+            padding: 50px 0px;
+        }
+
+        #banner .box .btn button {
+            padding: 13px 27px;
+            background-color: #97a9bd;
+            border: #97a9bd;
+            color: white;
+            font-size: 20px;
+            transition: 00.3s ease-in-out;
+        }
+
+        #banner .box .btn button:hover {
+            background: transparent;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        #banner2 {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #banner2 .card {
+            height: 280px;
+            width: 280px;
+            margin: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            border-top-left-radius: 95px;
+            border-bottom-right-radius: 95px;
+            transition: 0.3s ease-in-out;
+        }
+
+        #banner2 .card i {
+            margin: 0 0 40px 0;
+            background-color: #fff;
+            font-size: 35px;
+            color: black;
+            padding: 15px;
+            border-radius: 50%;
+        }
+
+        #banner2 .card h2 {
+            margin: 0 0 10px 0;
+            font-weight: 500;
+            font-size: 21px;
+        }
+
+        #banner2 .card p {
+            font-size: 13px;
+        }
+
+        #banner2 .card1 {
+            background-color: #97a9bd;
+        }
+
+        #banner2 .card2 {
+            background-color: #a197bd;
+        }
+
+        #banner2 .card3 {
+            background-color: #d3c4ba;
+        }
+
+        #banner2 .card4 {
+            background-color: #97bdab;
+        }
+
+        #banner2 .card:hover {
+            border-radius: 0;
+        }
+
+        #banner3 {
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #banner3 .box {
+            height: 400px;
+
+            margin: 60px 30px;
+        }
+
+        #banner3 .box .image {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            object-fit: cover;
+        }
+
+        #banner3 .box .arrow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.4s ease-in-out;
+            padding: 10px 0;
+
+        }
+
+        #banner3 .box .arrow h1 {
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            padding: 0 0 0 15px;
+        }
+
+        #banner3 .box .arrow i {
+            padding: 0 10px 0 0;
+        }
+
+        #banner3 .box .arrow:hover {
+            background-color: #97a9bd;
+            color: #fff;
+        }
+
+        #banner4 {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(#b2bfcc6b, #b2bfcc75), url(./image/background-02.jpg);
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        #banner4 h4 {
+            font-size: 18px;
+            text-align: center;
+            padding: 80px 0 0 0;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        #banner4 h1 {
+            font-size: 30px;
+            text-align: center;
+            color: #fff;
+            font-weight: 500;
+            font-family: 'Merienda', cursive;
+        }
+
+        #banner4 .parent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #banner4 .parent .box {
+            height: 250px;
+            width: 380px;
+            background-color: #fff;
+            transition: 0.3s ease-in-out;
+            margin: 30px;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        #banner4 .parent .box:hover {
+            background-color: #97a9bd;
+            color: #fff;
+        }
+
+        #banner4 .parent .box i {
+            background-color: #97a9bd;
+            color: #fff;
+            font-size: 30px;
+            padding: 13px 0 0 0;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+
+        #banner4 .parent .box:hover i {
+            background-color: #fff;
+            color: #97a9bd;
+        }
+
+        #banner4 .parent .box h2 {
+            margin: 30px 0 15px 0;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        #banner4 .parent .box p {
+            font-size: 14px;
+        }
+
+        @media screen and (max-width:500px) {
+            #banner4 .parent .box p {
+                font-size: 12px;
+            }
+
+            #banner4 .parent .box h2 {
+                margin: 0px 0 0px 0;
+            }
+        }
+
+
+        #banner6 {
+            height: 100%;
+            width: 100%;
+            background-color: #f4f4f4;
+        }
+
+        #banner6 h4 {
+            text-align: center;
+            padding: 80px 0 0 0;
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        #banner6 h1 {
+            font-size: 32px;
+            text-align: center;
+            font-weight: 500;
+            font-family: 'Merienda', cursive;
+        }
+
+        #banner6 .parent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #banner6 .parent .box {
+            height: 450px;
+            width: 380px;
+            margin: 25px;
+            transition: 0.03s ease-in-out;
+        }
+
+        #banner6 .parent .box:hover {
+            box-shadow: gray 3px 3px 3px 0;
+        }
+
+        #banner6 .parent .box img {
+            height: 340px;
+            width: 380px;
+            background-size: cover;
+            object-fit: cover;
+        }
+
+        #banner6 .parent .box h2 {
+            font-size: 25px;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        #banner6 .parent .box p {
+            text-align: center;
+            font-weight: 300;
+        }
+
+        #banner7 {
+            height: 100%;
+            width: 100%;
+            background-color: #97a9bd;
+        }
+
+        #banner7 h4 {
+            text-align: center;
+            padding: 80px 0 0 0;
+            font-size: 17px;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        #banner7 h1 {
+            font-size: 32px;
+            text-align: center;
+            font-weight: 500;
+            font-family: 'Merienda', cursive;
+            color: #fff;
+        }
+
+        #banner7 .parent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #banner7 .parent .box {
+            height: 400px;
+            width: 600px;
+
+            margin: 50px 20px 0 20px;
+        }
+
+        #banner7 .parent .box .innerchild {
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        #banner7 .parent .box .innerchild img {
+            background-size: cover;
+            object-fit: cover;
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+        }
+
+        #banner7 .parent .box .innerchild .profession {
+            text-align: left;
+            margin: 0 0 0 20px;
+            color: #fff;
+        }
+
+        #banner7 .parent .box .card {
+            width: auto;
+            padding: 15px;
+            background-color: #fff;
+            border-top-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            color: #000;
+            margin: 60px 0 0 0;
+        }
+
+        #banner7 .parent .box .card p {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        #banner8 {
+            height: 100%;
+            width: 100%;
+        }
+
+        #banner8 h4 {
+            text-align: center;
+            padding: 80px 0 0 0;
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        #banner8 h1 {
+            font-size: 32px;
+            text-align: center;
+            font-weight: 500;
+            font-family: 'Merienda', cursive;
+        }
+
+        #banner8 .parent {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #banner8 .parent .box {
+            height: auto;
+            width: 380px;
+            margin: 55px;
+
+        }
+
+        #banner8 .parent .box img {
+            height: 280px;
+            width: 380px;
+            transition: 0.3s ease-in-out;
+            background-size: cover;
+            object-fit: cover;
+        }
+
+        #banner8 .parent .box img:hover {
+            filter: grayscale(180%);
+            margin: -15px 0 0 0;
+        }
+
+        #banner8 .parent .box .jo {
+            height: 100%;
+            width: 100%;
+        }
+
+        #banner8 .parent .box .jo h5 {
+            font-size: 14px;
+            font-weight: 300;
+
+        }
+
+        #banner8 .parent .box .jo h3 {
+            font-size: 20px;
+            font-weight: 300;
+            color: #9cb1cd;
+        }
+
+        @media screen and (max-width:400px) {
+            #banner8 .parent .box .jo h3 {
+                font-size: 7px;
+            }
+
+            #banner8 .parent .box .jo h5 {
+                font-size: 7px;
+            }
+        }
+
+        #banner9 {
+            height: 100%;
+            width: 100%;
+            background-color: #f4f4f4;
+        }
+
+        #banner9 h4 {
+            text-align: center;
+            padding: 80px 0 0 0;
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        #banner9 h1 {
+            font-size: 32px;
+            text-align: center;
+            font-weight: 500;
+            font-family: 'Merienda', cursive;
+        }
+
+        #banner9 .parent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #banner9 .parent .card {
+            height: auto;
+            width: 700px;
+            margin: 25px;
+        }
+
+        #banner9 .parent .card .fc:hover {
+            background-color: #bab2ce;
+            color: #fff;
+        }
+
+        #banner9 .parent .card .ac:hover {
+            background-color: #bda697;
+            color: #fff;
+        }
+
+        #banner9 .parent .card .cc:hover {
+            background-color: #97bdab;
+            color: #fff;
+        }
+
+        #banner9 .parent .card .box {
+            height: 80px;
+            width: 700px;
+            background-color: #fff;
+            transition: 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        #banner9 .parent .card .box i {
+            background-color: #bab2ce;
+            font-size: 25px;
+            transition: 0.3s ease-in-out;
+            color: #fff;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 50%;
+        }
+
+        #banner9 .parent .card .box:hover i {
+            background-color: #fff;
+            color: #bab2ce;
+        }
+
+        #banner9 .parent .card .box .img {
+            background-color: #bda697;
+        }
+
+        #banner9 .parent .card .box:hover img {
+            background-color: #fff;
+            color: #bda697;
+        }
+
+        #banner9 .parent .card .box .img1 {
+            background-color: #97bdab;
+        }
+
+        #banner9 .parent .card .box:hover .img1 {
+            background-color: #fff;
+            color: #97bdab;
+        }
+
+        #banner9 .parent .card .box .info h5 {
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        #banner9 .card h2 {
+            font-size: 25px;
+            font-weight: 400;
+            padding: 20px 0;
+        }
+
+        #banner9 .card p {
+            font-weight: 400;
+            font-size: 19px;
+            padding: 0 0 20px 0;
+        }
+
+        #banner9 .card .type {
+            height: 55px;
+            width: 500px;
+            padding: 15px;
+            border: #fff;
+        }
+
+        #banner9 .card .btn button {
+            font-size: 22px;
+            font-weight: 400;
+            padding: 3px 20px;
+            border: #97a9bd;
+            transition: 0.3s ease-in-out;
+            color: #fff;
+            background-color: #97a9bd;
+        }
+
+        #banner9 .card .btn button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        @media screen and (max-width:400px) {
+            #banner9 .parent .card {
+                height: auto;
+                width: 400px;
+            }
+
+            #banner9 .parent .card .box {
+                width: 380px;
+            }
+
+            #banner9 .card .type {
+                width: 380px;
+
+            }
+            #banner9 .card h2{
+                font-size: 20px;
+            }
+            #banner9 .card p{
+                font-size: 15px;
+            }
+           
+        }
+
+        #banner10 {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.221), rgba(0, 0, 0, 0.253)), url(./image/background-03.jpg);
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #banner10 .parent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #banner10 h1 {
+            font-size: 32px;
+            text-align: center;
+            font-weight: 500;
+            padding: 50px 0 20px 0;
+            color: #fff;
+            font-family: 'Merienda', cursive;
+        }
+
+        #banner10 p {
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        #banner10 .parent i {
+            border: white;
+            color: #fff;
+            font-size: 30px;
+            padding: 15px;
+            height: 60px;
+            margin: 25px 0;
+            width: 60px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="banner">
+        <div class="box">
+            <h1>Faucibus Porttitor Metus</h1>
+            <p>In nibh nullam egestas velit laoreet nullam elementum ipsum pharetra<br>suscipit leo augue pretium felis
+                nisl vitae ipsum curabitur quis libero.
+            </p>
+            <div class="btn">
+                <button>Tristique vehicula</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="banner2">
+        <div class="card card1">
+            <i class="fa-brands fa-google"></i>
+            <h2>Feugiat Fermentum</h2>
+            <p>Ac orci proin porttitor lacus <br> eget mi pellentesque non.</p>
+        </div>
+
+        <div class="card card2">
+            <i class="fa-brands fa-instagram"></i>
+            <h2>Malesuada Accumsan</h2>
+            <p>Sapien sed metus congue <br> sodales vivamus scelerisque.</p>
+        </div>
+
+        <div class="card card3">
+            <i class="fa-brands fa-twitter"></i>
+            <h2>Mauris Placerat</h2>
+            <p>Et interdum vulputate purus <br> nisl fringilla sapien quis.</p>
+        </div>
+
+        <div class="card card4">
+            <i class="fa-brands fa-youtube"></i>
+            <h2>Elementum Rhoncus</h2>
+            <p>Sollicitudin dui mauris dui <br> nunc lorem tortor pharetra.</p>
+        </div>
+
+    </section>
+
+    <section id="banner3">
+        <div class="box">
+            <img src="./image/01.jpg" class="image" alt="">
+            <div class="arrow">
+                <h1>Accumsan Placerat</h1>
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./image/02.jpg" class="image" alt="">
+            <div class="arrow">
+                <h1>scelerisque Etiam</h1>
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner4">
+        <h4>Quis leo hendrerit lectus morbi</h4>
+        <h1>Justo Mauris Tempus Pharetra</h1>
+        <div class="parent">
+            <div class="box">
+                <i class="fa-solid fa-hourglass-end"></i>
+                <h2>Sociis Natoque Penatibus</h2>
+                <p>Interdum at congue semper purus nullam quis odio id justo accumsan ullamcorper maecenas vel
+                    arcu
+                    nulla tincidunt elit ornare.</p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-paw"></i>
+                <h2>Magnis Parturient Montes</h2>
+                <p>Urna proin venenatis eros viverra ultrices fringilla lectus urna consequat erat
+                    eget scelerisque
+                    ligula felis nec neque nam.</p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-calculator"></i>
+                <h2>Nascetur Ridiculus Aenean</h2>
+                <p>Vitae ipsum vitae velit porttitor aliquam in quam aliquam ullamcorper sem a auctor dapibus nisi
+                    nunc
+                    vehicula nunc quis mattis.</p>
+            </div>
+            <div class="box">
+                <i class="fa-sharp fa-solid fa-tty"></i>
+                <h2>Ullamcorper Neque Phasellus</h2>
+                <p>Pede turpis at elit nunc at urna sed ligula vivamus vel erat at diam imperdiet pharetra quisque
+                    justo
+                    turpis mattis ut vitae.</p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-calendar-days"></i>
+                <h2>Aliquet Lacus Nulla Erat</h2>
+                <p>Tortor aenean leo ipsum elementum non cursus eu interdum ut risus proin risus nibh viverra eget
+                    lobortis feugiat egestas in nisl.</p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <h2>Aliquam Volutpat Curabitur</h2>
+                <p>Fusce dignissim neque vitae justo aenean ac urna et leo posuere pretium nunc bibendum enim quis
+                    imperdiet elementum dui dolor.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner6">
+        <h4>Purus ut mi sed velit urna ut</h4>
+        <h1>Sapien Posuere In Iaculis</h1>
+        <div class="parent">
+            <div class="box">
+                <img src="./image/03.jpg" alt="">
+                <h2>A. Doe</h2>
+                <p>Euismod nec hendrerit</p>
+            </div>
+            <div class="box">
+                <img src="./image/04.jpg" alt="">
+                <h2>B. Doe</h2>
+                <p>Vel velit aliquam massa</p>
+            </div>
+            <div class="box">
+                <img src="./image/05.jpg" alt="">
+                <h2>C. Doe</h2>
+                <p>Vulputate aliquet purus</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner7">
+        <h4>Maecenas ultrices faucibus felis</h4>
+        <h1>Nunc Lacus Nulla Luctus Duis</h1>
+        <div class="parent">
+            <div class="box">
+                <div class="innerchild">
+                    <img src="./image/06.jpg" alt="">
+                    <div class="profession">
+                        <h3>D. Doe</h3>
+                        <h6>Adipiscing fusce eu velit</h6>
+                    </div>
+                </div>
+                <div class="card">
+                    <p>Pulvinar tortor quis nisi in hac habitasse platea dictumst donec ac tellus fusce venenatis
+                        laoreet elit sed est tortor molestie in consectetuer fringilla suscipit ut odio ut ac.</p>
+                </div>
+
+            </div>
+            <div class="box">
+                <div class="innerchild">
+                    <img src="./image/07.jpg" alt="">
+                    <div class="profession">
+                        <h3>E. Doe</h3>
+                        <h6>Mauris erat aliquam leo</h6>
+                    </div>
+                </div>
+                <div class="card">
+                    <p>Orci vitae dolor scelerisque blandit morbi eu dui sed volutpat etiam leo leo bibendum vel dictum
+                        sed sollicitudin a mi pellentesque ligula nulla facilisi sed bibendum ornare.</p>
+                </div>
+    </section>
+
+    <section id="banner8">
+        <h4>Lorem aenean nunc aenean sagittis</h4>
+        <h1>Imperdiet Massa Maecenas</h1>
+        <div class="parent">
+            <div class="box">
+                <img src="./image/08.jpg" alt="">
+                <div class="jo">
+                    <h5>05 APR 2045</h5>
+                    <h3>Quam Justo Suscipit At Blandit At Blandit Vitae Tellus Maecenas</h3>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./image/09.jpg" alt="">
+                <div class="jo">
+                    <h5>04 APR 2045</h5>
+                    <h3>Commodo Mauris A Semper Posuere Sem Arcu Cursus Felis Non Cursus</h3>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./image/10.jpg" alt="">
+                <div class="jo">
+                    <h5>03 APR 2045</h5>
+                    <h3>Enim Odio In Odio Suspendisse Commodo Suscipit Nisi Nam Tellus</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner9">
+        <h4>Enim eleifend dignissim bibendum</h4>
+        <h1>Id Tristique Id Metus Nulla</h1>
+        <div class="parent">
+            <div class="card">
+                <div class="box fc">
+
+                    <i class="fa-solid fa-phone"></i>
+                    <div class="info">
+                        <h3>Give Us A Call:</h3>
+                        <h5>+00 (123) 456 7890</h5>
+                    </div>
+                </div>
+                <div class="box ac">
+                    <i class="img fa-regular fa-envelope"></i>
+                    <div class="info">
+                        <h3>Send Us A Mail:</h3>
+                        <h5>support@domain.com</h5>
+                    </div>
+                </div>
+                <div class="box cc">
+                    <i class="img1 fa-solid fa-location-dot"></i>
+                    <div class="info">
+                        <h3>Come Visit Us:</h3>
+                        <h5>Directions to our location</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <h2>Purus Nullam Arcu Integer</h2>
+                <p>Elementum nisi ac volutpat vestibulum enim mi tincidunt eros sed justo magna odio sed lacus ut non
+                    ante sit amet est luctus dictum ut dolor ac.</p>
+                <input type="text" class="type" placeholder="Name"><br><br>
+
+                <input type="text" class="type" placeholder="email"><br><br>
+
+                <div class="btn">
+                    <button>SUBMIT</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner10">
+        <h1>Foolish Developer</h1>
+        <p>Foolish Developer is a blog website where you will find great tutorialon web <br>
+            design and development. Here each tutorial is beautifully described step by step <br>
+            with the required source code.
+        </p>
+        <div class="parent">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-google-plus-g"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-linkedin"></i>
+
+        </div>
+    </section>
+</body>
+
+</html>
